@@ -444,22 +444,37 @@
         <div class="container text-center">
             <h6 class="section-title mb-5">Contact Me</h6>
             <!-- contact form -->
-            <form action="" class="contact-form col-md-10 col-lg-8 m-auto">
+            <form id="contact-form" action="" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input type="text" size="50" class="form-control" placeholder="Your Name" required>                 
+                        <input type="text" size="50" class="form-control" name="user_name" placeholder="Your Name" required>                 
                     </div>
                     <div class="form-group col-sm-6">
-                        <input type="email" class="form-control" placeholder="Your Email"requried>                 
+                        <input type="email" class="form-control" name="user_email" placeholder="Your Email"requried>                 
                     </div>
                     <div class="form-group col-sm-12">
-                        <textarea name="comment" id="comment" rows="6"   class="form-control" placeholder="Your message"></textarea>
+                        <textarea name="message" id="comment" rows="6"  class="form-control" placeholder="Your message"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">                  
+                        <button id="submit-btn" type="submit" class="btn btn-outline-primary rounded">Send Message</button>
                     </div>
                 </div>  
             </form><!-- end of contact form -->
+            <div class="col-md-8 m-auto">
+                <div id="alert-success" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    Form submitted successfully!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
+                 <div id="alert-failed" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                    An error occured, please try again later.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
+
+            </div>
         </div><!-- end of container -->
     </section>
     <!-- end of contact section -->
@@ -492,6 +507,10 @@
 
     <!-- Custom js -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- EmailJS Service -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="assets/js/emailjs.js"></script>
 
 </body>
 </html>
